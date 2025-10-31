@@ -1,6 +1,6 @@
 {
 	"name": "@simplesat/n8n-nodes-simplesat",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Simplesat's n8n community node",
 	"license": "MIT",
 	"homepage": "https://simplesat.io",
