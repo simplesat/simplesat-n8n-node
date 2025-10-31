@@ -32,7 +32,7 @@ export async function getEventBasedEmailSurveys(
 				survey.survey_type === 'event_based_email'
 			)
 			.map((survey: { id: number; name: string; survey_token: string }) => ({
-				name: survey.name || `Survey ${survey.id}`,
+				name: survey.name,
 				value: survey.survey_token,
 			}));
 
