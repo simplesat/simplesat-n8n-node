@@ -1,0 +1,16 @@
+{
+	"name": "Simplesat",
+	"version": 1,
+	"description": "Connect to the Simplesat API",
+	"defaults": {
+		"name": "Simplesat"
+	},
+	"inputs": ["main"],
+	"outputs": ["main"],
+	"credentials": [
+		{
+			"name": "Simplesat",
+			"required": true
+		}
+	]
+}

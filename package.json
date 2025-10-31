@@ -1,0 +1,58 @@
+{
+	"name": "@simplesat/n8n-nodes-simplesat",
+	"version": "0.1.0",
+	"description": "Simplesat's n8n community node",
+	"license": "MIT",
+	"homepage": "https://simplesat.io",
+	"keywords": [
+		"n8n-community-node-package",
+		"simplesat",
+		"n8n"
+	],
+	"author": {
+		"name": "Simplesat",
+		"email": "integrations@simplesat.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/simplesat/simplesat-n8n-node.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/SimplesatApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Simplesat/Simplesat.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"overrides": {
+		"form-data": "^4.0.4"
+	}
+}
