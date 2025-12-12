@@ -151,13 +151,13 @@ export class Simplesat implements INodeType {
 				const responseData = await operationHandler.call(this, i);
 
 				if (Array.isArray(responseData)) {
-					returnData.push(...responseData.map(item => ({ json: item })));
+					returnData.push(...responseData.map(item => ({ json: item, pairedItem: { item: i } })));
 				} else if (responseData !== undefined && responseData !== null) {
-					returnData.push({ json: responseData as IDataObject });
+					returnData.push({ json: responseData as IDataObject, pairedItem: { item: i } });
 				}
 			} catch (error) {
 				if (this.continueOnFail()) {
-					returnData.push({ json: { error: error.message } });
+					returnData.push({ json: { error: error.message }, pairedItem: { item: i } });
 					continue;
 				}
 				throw error;
