@@ -1,16 +1,18 @@
 {
-	"name": "Simplesat",
-	"version": 1,
-	"description": "Connect to the Simplesat API",
-	"defaults": {
-		"name": "Simplesat"
-	},
-	"inputs": ["main"],
-	"outputs": ["main"],
-	"credentials": [
-		{
-			"name": "Simplesat",
-			"required": true
-		}
-	]
+	"node": "n8n-nodes-base.simplesat",
+	"nodeVersion": 1,
+	"codexVersion": "1.0",
+	"categories": ["Analytics"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://help.simplesat.io/en/articles/4020334-where-can-i-find-my-api-key"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://developer.simplesat.io/api/"
+			}
+		]
+	}
 }
