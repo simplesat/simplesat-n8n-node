@@ -5,6 +5,7 @@ import {
 	INodeTypeDescription,
 	NodeOperationError,
 	IDataObject,
+	NodeConnectionTypes,
 } from 'n8n-workflow';
 
 // Import resource definitions
@@ -46,8 +47,8 @@ export class Simplesat implements INodeType {
 		defaults: {
 			name: 'Simplesat',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'simplesatApi',

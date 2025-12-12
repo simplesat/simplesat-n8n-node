@@ -7,22 +7,19 @@ export async function getEventBasedEmailSurveys(
 	this: ILoadOptionsFunctions,
 ): Promise<INodePropertyOptions[]> {
 	try {
-		const credentials = await this.getCredentials('simplesatApi');
-		
-		if (!credentials) {
-			return [];
-		}
-
 		// Fetch all surveys (max 1000)
-		const responseData = await this.helpers.httpRequest({
-			method: 'GET',
-			url: 'https://api.simplesat.io/api/v1/surveys?page_size=1000',
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json',
-				'X-Simplesat-Token': credentials.apiToken as string,
+		const responseData = await this.helpers.httpRequestWithAuthentication.call(
+			this,
+			'simplesatApi',
+			{
+				method: 'GET',
+				url: 'https://api.simplesat.io/api/v1/surveys?page_size=1000',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+				},
 			},
-		});
+		);
 
 		const surveys = responseData?.surveys || [];
 		
@@ -46,22 +43,19 @@ export async function getAllSurveysForSearch(
 	this: ILoadOptionsFunctions,
 ): Promise<INodePropertyOptions[]> {
 	try {
-		const credentials = await this.getCredentials('simplesatApi');
-		
-		if (!credentials) {
-			return [];
-		}
-
 		// Fetch all surveys (max 1000)
-		const responseData = await this.helpers.httpRequest({
-			method: 'GET',
-			url: 'https://api.simplesat.io/api/v1/surveys?page_size=1000',
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json',
-				'X-Simplesat-Token': credentials.apiToken as string,
+		const responseData = await this.helpers.httpRequestWithAuthentication.call(
+			this,
+			'simplesatApi',
+			{
+				method: 'GET',
+				url: 'https://api.simplesat.io/api/v1/surveys?page_size=1000',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+				},
 			},
-		});
+		);
 
 		const surveys = responseData?.surveys || [];
 
