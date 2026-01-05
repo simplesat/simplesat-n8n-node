@@ -43,7 +43,7 @@ export class Simplesat implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Connect to Simplesat API',
+		description: 'Connect to the Simplesat API to manage your surveys, responses, customers and more.',
 		defaults: {
 			name: 'Simplesat',
 		},
