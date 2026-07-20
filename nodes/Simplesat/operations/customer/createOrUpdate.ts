@@ -4,6 +4,7 @@ export async function executeCreateOrUpdate(this: IExecuteFunctions, i: number) 
 	const email = this.getNodeParameter('email', i) as string;
 	const name = this.getNodeParameter('name', i) as string;
 	const company = this.getNodeParameter('company', i) as string;
+	const language = this.getNodeParameter('language', i) as string;
 	const externalId = this.getNodeParameter('externalId', i) as string;
 	const tags = this.getNodeParameter('tags', i) as string;
 	const customAttributes = this.getNodeParameter('customAttributes', i) as string;
@@ -12,6 +13,7 @@ export async function executeCreateOrUpdate(this: IExecuteFunctions, i: number) 
 		email: string;
 		name?: string;
 		company?: string;
+		language?: string;
 		external_id?: string;
 		tags?: string[];
 		custom_attributes?: Record<string, unknown>;
@@ -21,6 +23,7 @@ export async function executeCreateOrUpdate(this: IExecuteFunctions, i: number) 
 
 	if (name) body.name = name;
 	if (company) body.company = company;
+	if (language) body.language = language;
 	if (externalId) body.external_id = externalId;
 	if (tags) body.tags = tags.split(',').map(tag => tag.trim()).filter(tag => tag);
 	

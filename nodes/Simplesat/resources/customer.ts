@@ -221,6 +221,19 @@ export const customerOperations: INodeProperties[] = [
 		description: 'Company associated with the customer',
 	},
 	{
+		displayName: 'Language',
+		name: 'language',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['customer'],
+				operation: ['createOrUpdate'],
+			},
+		},
+		default: '',
+		description: 'Language code for the customer (e.g. en)',
+	},
+	{
 		displayName: 'External ID',
 		name: 'externalId',
 		type: 'string',
@@ -299,6 +312,19 @@ export const customerOperations: INodeProperties[] = [
 		},
 		default: '',
 		description: 'Company name of the customer',
+	},
+	{
+		displayName: 'Language',
+		name: 'updateLanguage',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['customer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Language code for the customer (e.g. en)',
 	},
 	{
 		displayName: 'External ID',

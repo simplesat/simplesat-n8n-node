@@ -4,6 +4,7 @@ export async function executeUpdate(this: IExecuteFunctions, i: number) {
 	const customerId = this.getNodeParameter('updateCustomerId', i) as number;
 	const name = this.getNodeParameter('updateName', i) as string;
 	const company = this.getNodeParameter('updateCompany', i) as string;
+	const language = this.getNodeParameter('updateLanguage', i) as string;
 	const externalId = this.getNodeParameter('updateExternalId', i) as string;
 	const tags = this.getNodeParameter('updateTags', i) as string;
 	const customAttributes = this.getNodeParameter('updateCustomAttributes', i) as string;
@@ -11,6 +12,7 @@ export async function executeUpdate(this: IExecuteFunctions, i: number) {
 	const body: {
 		name?: string;
 		company?: string;
+		language?: string;
 		external_id?: string;
 		tags?: string[];
 		custom_attributes?: Record<string, unknown>;
@@ -18,6 +20,7 @@ export async function executeUpdate(this: IExecuteFunctions, i: number) {
 
 	if (name) body.name = name;
 	if (company) body.company = company;
+	if (language) body.language = language;
 	if (externalId) body.external_id = externalId;
 	if (tags) body.tags = tags.split(',').map(tag => tag.trim()).filter(tag => tag);
 	
