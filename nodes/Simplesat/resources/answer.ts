@@ -24,6 +24,12 @@ export const answerOperations: INodeProperties[] = [
 				description: 'Search answers',
 				action: 'Search answers',
 			},
+			{
+				name: 'Update',
+				value: 'update',
+				description: 'Update answer by ID',
+				action: 'Update answer by ID',
+			},
 		],
 		default: 'get',
 	},
@@ -41,6 +47,99 @@ export const answerOperations: INodeProperties[] = [
 		},
 		default: '',
 		description: 'The ID of the answer to retrieve',
+	},
+	// Answer Update parameters
+	{
+		displayName: 'Answer ID',
+		name: 'updateAnswerId',
+		type: 'number',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'The ID of the answer to update',
+	},
+	{
+		displayName: 'Choice',
+		name: 'updateChoice',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Single choice value. One of Choice, Choices, or Comment is required',
+	},
+	{
+		displayName: 'Choices',
+		name: 'updateChoices',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Comma-separated choice values. One of Choice, Choices, or Comment is required',
+	},
+	{
+		displayName: 'Comment',
+		name: 'updateComment',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Comment text. One of Choice, Choices, or Comment is required',
+	},
+	{
+		displayName: 'Follow Up Answer',
+		name: 'updateFollowUpAnswer',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Follow-up answer text',
+	},
+	{
+		displayName: 'Follow Up Answer Choice',
+		name: 'updateFollowUpAnswerChoice',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Single follow-up answer choice',
+	},
+	{
+		displayName: 'Follow Up Answer Choices',
+		name: 'updateFollowUpAnswerChoices',
+		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['answer'],
+				operation: ['update'],
+			},
+		},
+		default: '',
+		description: 'Comma-separated follow-up answer choices',
 	},
 	// Answer Search parameters
 	{

@@ -27,6 +27,7 @@ import { executeGet as executeResponseGet } from './operations/response/get';
 import { executeSearch as executeResponseSearch } from './operations/response/search';
 import { executeGet as executeAnswerGet } from './operations/answer/get';
 import { executeSearch as executeAnswerSearch } from './operations/answer/search';
+import { executeUpdate as executeAnswerUpdate } from './operations/answer/update';
 import { executeList as executeCustomerList } from './operations/customer/list';
 import { executeGet as executeCustomerGet } from './operations/customer/get';
 import { executeCreateOrUpdate as executeCustomerCreateOrUpdate } from './operations/customer/createOrUpdate';
@@ -126,6 +127,7 @@ export class Simplesat implements INodeType {
 			answer: {
 				get: executeAnswerGet,
 				search: executeAnswerSearch,
+				update: executeAnswerUpdate,
 			},
 			customer: {
 				list: executeCustomerList,
