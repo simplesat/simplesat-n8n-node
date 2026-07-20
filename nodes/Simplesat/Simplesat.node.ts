@@ -3,8 +3,10 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	NodeApiError,
 	NodeOperationError,
 	IDataObject,
+	JsonObject,
 	NodeConnectionTypes,
 } from 'n8n-workflow';
 
@@ -163,7 +165,7 @@ export class Simplesat implements INodeType {
 					returnData.push({ json: { error: error.message }, pairedItem: { item: i } });
 					continue;
 				}
-				throw error;
+				throw new NodeApiError(this.getNode(), error as JsonObject);
 			}
 		}
 

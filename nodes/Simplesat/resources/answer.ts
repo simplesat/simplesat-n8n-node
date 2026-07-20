@@ -74,7 +74,7 @@ export const answerOperations: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Single choice value. One of Choice, Choices, or Comment is required',
+		description: 'Single choice value. One of Choice, Choices, or Comment is required.',
 	},
 	{
 		displayName: 'Choices',
@@ -87,7 +87,7 @@ export const answerOperations: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Comma-separated choice values. One of Choice, Choices, or Comment is required',
+		description: 'Comma-separated choice values. One of Choice, Choices, or Comment is required.',
 	},
 	{
 		displayName: 'Comment',
@@ -100,7 +100,7 @@ export const answerOperations: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Comment text. One of Choice, Choices, or Comment is required',
+		description: 'Comment text. One of Choice, Choices, or Comment is required.',
 	},
 	{
 		displayName: 'Follow Up Answer',
