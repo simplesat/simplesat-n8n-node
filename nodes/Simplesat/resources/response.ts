@@ -96,29 +96,6 @@ export const responseOperations: INodeProperties[] = [
 		description: 'End date for modified date range',
 	},
 	{
-		displayName: 'Operator',
-		name: 'operator',
-		type: 'options',
-		options: [
-			{
-				name: 'And',
-				value: 'and',
-			},
-			{
-				name: 'Or',
-				value: 'or',
-			},
-		],
-		displayOptions: {
-			show: {
-				resource: ['response'],
-				operation: ['search'],
-			},
-		},
-		default: 'and',
-		description: 'Logical operator for combining filters',
-	},
-	{
 		displayName: 'Filters',
 		name: 'filters',
 		type: 'fixedCollection',

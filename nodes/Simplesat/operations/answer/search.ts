@@ -4,7 +4,6 @@ import { FilterItem, FiltersCollection, SimplesatResponse } from '../../types';
 export async function executeSearch(this: IExecuteFunctions, i: number) {
 	const startDate = this.getNodeParameter('startDate', i) as string;
 	const endDate = this.getNodeParameter('endDate', i) as string;
-	const operator = this.getNodeParameter('operator', i) as string;
 	const filters = this.getNodeParameter('filters', i) as FiltersCollection;
 	const returnAll = this.getNodeParameter('returnAll', i) as boolean;
 	const limit = returnAll ? undefined : (this.getNodeParameter('limit', i) as number);
@@ -13,14 +12,12 @@ export async function executeSearch(this: IExecuteFunctions, i: number) {
 	const body: {
 		start_date?: string;
 		end_date?: string;
-		operator: string;
 		filters: Array<{
 			key: string;
 			values: string[];
 			comparison: string;
 		}>;
 	} = {
-		operator: operator,
 		filters: [],
 	};
 

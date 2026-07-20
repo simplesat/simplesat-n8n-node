@@ -70,29 +70,6 @@ export const answerOperations: INodeProperties[] = [
 		description: 'End date for the search range',
 	},
 	{
-		displayName: 'Operator',
-		name: 'operator',
-		type: 'options',
-		options: [
-			{
-				name: 'And',
-				value: 'and',
-			},
-			{
-				name: 'Or',
-				value: 'or',
-			},
-		],
-		displayOptions: {
-			show: {
-				resource: ['answer'],
-				operation: ['search'],
-			},
-		},
-		default: 'and',
-		description: 'Logical operator for combining filters',
-	},
-	{
 		displayName: 'Filters',
 		name: 'filters',
 		type: 'fixedCollection',
