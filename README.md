@@ -4,11 +4,19 @@ This is an n8n community node. It lets you connect to the Simplesat API in your 
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
-[Installation](#installation)  
-[Operations](#operations)  
-[Credentials](#credentials)
-[Usage](#usage)  
-[Resources](#resources)
+- [Maintenance status](#maintenance-status)
+- [Installation](#installation)
+- [Operations](#operations)
+- [Credentials](#credentials)
+- [Usage](#usage)
+- [Resources](#resources)
+
+## Maintenance status
+
+> [!IMPORTANT]
+> **New maintainer wanted.** The current maintainer no longer uses Simplesat and cannot reliably test changes against the live product. As a result, support, compatibility updates, and releases may be limited until a new maintainer takes over.
+
+If you use this node and would like to maintain it, please [open an issue](https://github.com/simplesat/simplesat-n8n-node/issues/new) with a short introduction and any relevant n8n, TypeScript, or Simplesat API experience. We are happy to discuss handing over the repository and npm package to the right person or team.
 
 ## Installation
 
